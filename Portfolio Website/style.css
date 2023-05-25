@@ -1,0 +1,201 @@
+body {
+    background-color: #D864A9;
+    background-image: linear-gradient(655deg, #D864A9, #FFA1A1, #ED5EDD);
+    animation: color 12s ease-in-out infinite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px
+}
+header  {
+    padding: 0px 40px;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    
+}
+header h3 {
+    grid-column: span 6;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: #7a19f1;
+    
+}
+header nav {
+    grid-column: 7 / span 6;
+    justify-self: end;
+}
+header nav a {
+    color: #7a19f1;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+section {
+    padding: 0px 40px;
+    align-items: center;
+}
+section .home {
+    grid-column: span 12 ;
+    text-align: center;
+    font-size: 2.5rem;  
+    color: #7a19f1;
+}
+section .intro {
+    grid-column: 5 / span 6;
+    text-align: center;
+    max-width: 400px;
+    min-height: auto;
+    border-radius: 20px;
+    background: transparent;
+    
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+p {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    color: #7a19f1;
+}
+.cards {
+    display: flex;
+    margin-top: 2rem;
+}
+
+section .card {
+    grid-column: span 3;
+    position: relative;
+    width: calc(100% - 230px);
+    top: 0;
+    background: #D864A9;
+    color: #7a19f1;
+    padding: 52px 0 32px 32px;
+    overflow-x: auto;
+    box-shadow: 0 1px 5px rgba(0,0,0,.7);
+    transition: all linear 0.2s;  
+    z-index: 1;
+}
+ section .card:not(:first-child) {
+    top: -28px;
+    margin-left: -4rem;
+}
+section .card:hover {
+    
+    transform: rotate(-20deg);
+}
+.skills {
+    padding-top: 40px;
+    grid-column: span 12 ;
+    text-align: center;
+    font-size: 2.5rem; 
+    color: #7a19f1; 
+}
+
+.contact {
+    padding-top: 40px;
+    grid-column: span 12 ;
+    text-align: center;
+    font-size: 2.5rem;  
+    color: #7a19f1;
+    
+}
+
+
+.contact-card {
+    position: relative;
+    z-index: 3;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 50px 30px 44px;
+    background: transparent;
+    border: 1px solid #ED5EDD;
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+    border-radius: 1.25rem;
+    text-align: center;
+}
+.contact-card > h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: #7a19f1;
+   
+}
+.contact-card > h3 {
+    color: rgba(0, 0, 0, 0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.contact-form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+.contact-form > input, .contact-form > button {
+    width: 70%;
+    height: 50px;
+    text-align: center;
+}
+.contact-form > input :hover{
+    border: .5px solid #ED5EDD;
+}
+.contact-form > input {
+    border: .5px solid #ED5EDD;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    outline: none;
+    background: transparent;
+    
+}
+.contact-form > button {
+    cursor: pointer;
+    width: 70%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: transparent;
+    color: #7a19f1;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+.contact-form > button:hover {
+    background: #ED5EDD;
+}
+
+
+
+
+footer{
+    margin-top: 60px;
+    padding: 20px 40px;
+   
+    align-items: center;
+}
+footer p {
+    grid-column: span 12;
+    text-align: center;
+    color: #7a19f1;
+}
+
+
+
+@media screen and (max-width: 960px){ 
+    main .welcome {
+        grid-column: 2 / span 10;
+        text-align: center;
+    }
+    main .card {
+        grid-column: 3 / span 8;
+    }
+
+}
